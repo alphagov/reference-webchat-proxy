@@ -17,7 +17,7 @@ def failure_response
   }.to_json
 end
 
-get '/availability' do
+get '/availability/:id' do
   # SET CORS HEADERS SO IT CAN BE ACCESSED VIA JS
   headers \
     "Access-Control-Allow-Origin" => "*",
@@ -25,7 +25,7 @@ get '/availability' do
     "Access-Control-Allow-Headers" =>  "Content-Type",
     "Access-Control-Max-Age" => "86400"
 
-  response          = HTTParty.get(ENV['EGAIN_URL'])
+  response          = HTTParty.get(ENV['EGAIN_URL'] + "/" + params[:id])
   egain_status      = response.parsed_response["checkEligibility"]["responseType"]
   normalised_status = EGAIN_NORMALISATION[egain_status.to_sym]
 
