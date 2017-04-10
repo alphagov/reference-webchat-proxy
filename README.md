@@ -13,13 +13,14 @@ set so this can be accessed by a browser.
 
 ---
 ##### GET `/availability` this endpoint is for getting the availability of the webchat implementation
-###### The api sent back an unknown response
+###### webchat has a technical error
+any response that does not conform to an available response type will render a technical error,
+as will a non 200 type response.
 
 ```
-  response code: 500
   {
     status: "failure",
-    response: "unknown"
+    response: "kittenz"
   }
 
 ```
@@ -28,7 +29,7 @@ set so this can be accessed by a browser.
   response code: 200
   {
     status: "success",
-    response: AVAILABLE
+    response: "AVAILABLE"
   }
 ```
 ###### WebChat is unavailable
@@ -36,17 +37,19 @@ set so this can be accessed by a browser.
   response code: 200
   {
     status: "success",
-    response: UNAVAILABLE
+    response: "UNAVAILABLE"
   }
 ```
 ###### WebChat is busy
 ```
+  response code: 200
   {
     status: "success",
-    response: BUSY
+    response: "BUSY"
   }
 ```
 ---
+
 
 ### dependencies
 
