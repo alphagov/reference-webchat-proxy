@@ -12,7 +12,7 @@ Anything other than a 200 response is a failure mode, json is returned, and CORS
 set so this can be accessed by a browser.
 
 ---
-##### GET `/availability` this endpoint is for getting the availability of the webchat implementation
+##### GET `/availability/:id` this endpoint is for getting the availability of the webchat implementation
 ###### webchat has a technical error
 any response that does not conform to an available response type will render a technical error,
 as will a non 200 type response.
@@ -49,6 +49,14 @@ as will a non 200 type response.
   }
 ```
 ---
+
+##### GET `/open/:id` this endpoint is for redirecting to the url for webchat
+
+this url is what url the javascript will open in the new window hits when the user clicks to open
+webchat, this should redirect to the webchat.
+
+
+
 
 
 ### dependencies

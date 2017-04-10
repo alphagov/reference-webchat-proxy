@@ -43,6 +43,11 @@ get '/availability/:id' do
 end
 
 
+get '/open/:id'
+  redirect to("https://online.hmrc.gov.uk/webchatprod/templates/chat/hmrc7/chat.html?entryPointId=#{params[:id]}&templateName=hmrc7&languageCode=en&countryCode=US&ver=v11")
+end
+
+
 # ALLOW OPTIONS REQUEST THROUGH CORS
 # https://github.com/britg/sinatra-cross_origin#responding-to-options
 options "*" do
