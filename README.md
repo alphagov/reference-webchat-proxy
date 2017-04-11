@@ -1,23 +1,21 @@
 # Webchat Proxy - Reference Implementation
-
-Note: We'd encourage teams to decide their chosen Webchat based on user needs, so while this example is for HMRC's eGain Webchat, this is as an example only and should not be used in production.
+Note: We encourage teams to decide their chosen Webchat based on user needs. This is reference implementation example for HMRC's eGain Webchat and should not be used in production.
 
 
 ## Motivation
-This Webchat proxy is a reference implementation example of how to normalise a Webchat API to what the GOV.UK Webchat Component needs, this particular implementation is for eGain.
+This Webchat proxy is a reference implementation example of how to normalise a Webchat API to the GOV.UK Webchat Component needs, and this particular implementation is for eGain.
 This API will take HMRC's eGain endpoints, and normalise them so that they're generic.
-
 
 Departments within government have multiple Webchat integrations, the javascript API needs a unified way of
 handling these integrations.
-This proxy will give departments flexibility over implementing caching or changing internals of their endpoint if it is needed without needing GOV.UK's support.
+
+This proxy will give departments flexibility over implementing caching or changing internals of their endpoint, if it is needed without GOV.UK's support.
 
 ## Webchat Indentifier Mappings
-Currently we keep a hardcoded mapping of URLs to their respective Webchat APIs, in the future we plan to allow these to be set in the Publishing Admin interface but currently these will need to be handled in collaboration with GOV.UK
+Currently we keep a hardcoded mapping of URLs to their respective Webchat APIs. In the future we plan to allow these to be set in the Publishing Admin interface, but currently these will need to be handled in collaboration with GOV.UK.
 
 ## API Description
-Anything other than a 200 response is a failure mode, JSON is returned, and CORS headers are
-set so this can be accessed by a browser.
+Anything more than a 200 response is a failure mode, JSON is returned, and CORS headers are set so this can be accessed by a browser.
 
 ---
 ### GET `/availability/:id`
