@@ -83,3 +83,8 @@ cd reference-webchat-proxy
 bundle install
 ruby app.rb
 ```
+### Further documentation
+
+The javascript and html side of this api is documented here.
+
+https://github.com/alphagov/government-frontend/tree/master/app/assets/javascripts/webchat
