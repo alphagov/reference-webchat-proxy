@@ -67,7 +67,7 @@ as will a non 200 type response.
 
 `:id` should be the unique Webchat room identifier
 
-This URL is used by the Webchat Component to open the correct Webchat instance.
+This URL is used by the Webchat Component to open the correct Webchat instance. The Webchat component should be able to call `window.open` on this endpoint and open a Webchat instance in a new window.
 
 In our reference example, we redirect to the underlying eGain API endpoint but this would change depending on your Webchat provider.
 
