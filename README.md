@@ -87,4 +87,4 @@ ruby app.rb
 
 The javascript and html side of this api is documented here.
 
-https://github.com/alphagov/government-frontend/tree/master/app/assets/javascripts/webchat
+https://github.com/alphagov/government-frontend/blob/master/docs/webchat.md
